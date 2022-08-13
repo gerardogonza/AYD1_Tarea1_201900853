@@ -13,6 +13,10 @@ def hello():
 def info():
     return jsonify({'Carne': 201900853,'Nombre':'Gerardo Steve Munoz Contreras'})
 
+@app.route('/resta/<int:num1>-<int:num2>', methods=['POST'])
+def resta(num1,num2):
+    return jsonify({'result': num1-num2})
+
 if __name__ == '__main__':
-    app.run(debug=True,port=4000)
+    app.run(debug=True,port=3000)
     
