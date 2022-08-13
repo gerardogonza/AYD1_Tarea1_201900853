@@ -22,6 +22,9 @@ def info():
 def resta(num1,num2):
     return jsonify({'result': num1-num2})
 
+@app.route('/multi/<int:num1>*<int:num2>', methods=['POST'])
+def multi(num1,num2):
+    return jsonify({'result': num1*num2})
 
 if __name__ == '__main__':
     app.run(debug=True,port=3000)
