@@ -12,3 +12,7 @@ def hello():
 @app.route('/calc/<int:num1>+<int:num2>', methods=['POST'])
 def calc(num1, num2):
     return jsonify({'result': num1 + num2})
+
+if __name__ == '__main__':
+    app.run(debug=True,port=3000)
+    
